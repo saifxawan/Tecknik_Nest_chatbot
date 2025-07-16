@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Proposal: AI-Powered Chatbot Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 350px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+                max-height: 400px;
+            }
+        }
+        .flow-arrow::after {
+            content: '→';
+            font-size: 2.5rem;
+            line-height: 1;
+            color: #00A6ED;
+            position: absolute;
+            top: 50%;
+            right: -2rem;
+            transform: translateY(-50%);
+        }
+        .flow-arrow-down::after {
+            content: '↓';
+            font-size: 2.5rem;
+            line-height: 1;
+            color: #00A6ED;
+            position: absolute;
+            bottom: -2.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-gray-800">
+
+    
+    <main class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center my-12">
+            <h1 class="text-4xl md:text-6xl font-black text-slate-800 leading-tight">AI-Powered Chatbot</h1>
+            <p class="text-xl md:text-2xl font-light text-[#00A6ED] mt-2">A Project Proposal Overview</p>
+        </header>
+
+        <section id="introduction" class="mb-16">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-4">The Challenge & The Solution</h2>
+                <p class="text-lg text-gray-600">
+                    Organizations often struggle with providing instant, accurate responses when information is scattered across documents. This project proposes a unified, intelligent chatbot to automate interactions and streamline information retrieval, combining multiple modern technologies into one seamless solution.
+                </p>
+            </div>
+        </section>
+
+        <section id="architecture" class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-10">System Architecture: A Decoupled Approach</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-16 items-center text-center">
+                <div class="relative bg-white p-6 rounded-lg shadow-lg flow-arrow-down md:flow-arrow">
+                    <div class="text-5xl mb-3">🖥️</div>
+                    <h3 class="text-xl font-bold text-slate-800">.NET Frontend</h3>
+                    <p class="text-gray-600">A responsive user interface built with ASP.NET Core for an intuitive user experience.</p>
+                </div>
+                <div class="relative bg-white p-6 rounded-lg shadow-lg flow-arrow-down md:flow-arrow">
+                    <div class="text-5xl mb-3">⚙️</div>
+                    <h3 class="text-xl font-bold text-slate-800">Python Backend</h3>
+                    <p class="text-gray-600">A Flask API handles AI logic, file processing, and business rules, acting as the application's brain.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="text-5xl mb-3">🗄️</div>
+                    <h3 class="text-xl font-bold text-slate-800">MongoDB Database</h3>
+                    <p class="text-gray-600">A flexible NoSQL database stores all chat history for easy retrieval and analysis.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tech-stack" class="mb-20">
+             <h2 class="text-3xl font-bold text-center mb-10">Core Technology Stack</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <h3 class="text-xl font-bold text-[#00A6ED] mb-2">Conversational AI</h3>
+                    <p class="font-semibold text-lg">DialoGPT</p>
+                    <p class="text-gray-600">Powered by the `transformers` library to generate natural, human-like responses.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <h3 class="text-xl font-bold text-[#00A6ED] mb-2">PDF Processing</h3>
+                    <p class="font-semibold text-lg">PyPDF2</p>
+                    <p class="text-gray-600">Enables robust text extraction directly from uploaded PDF documents.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <h3 class="text-xl font-bold text-[#00A6ED] mb-2">Image-to-Text (OCR)</h3>
+                    <p class="font-semibold text-lg">Pytesseract</p>
+                    <p class="text-gray-600">Utilizes Optical Character Recognition to read text from images like PNGs and JPGs.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <h3 class="text-xl font-bold text-[#00A6ED] mb-2">Data Persistence</h3>
+                    <p class="font-semibold text-lg">MongoDB Driver</p>
+                    <p class="text-gray-600">Connects the .NET application to the database for seamless chat history logging.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-10">Key Project Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4 text-center">Supported Document Formats</h3>
+                    <p class="text-gray-600 text-center mb-4">The chatbot is designed to extract text from the most common business document formats, enabling wide-ranging utility.</p>
+                    <div class="chart-container h-[300px] max-h-[300px] md:h-[350px] md:max-h-[350px]">
+                        <canvas id="fileTypesChart"></canvas>
+                    </div>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-4 text-center">Feature Focus Distribution</h3>
+                    <p class="text-gray-600 text-center mb-4">The project prioritizes a seamless user experience, powerful AI, and robust data handling as its core pillars.</p>
+                     <div class="chart-container">
+                        <canvas id="featureFocusChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="scope" class="mb-20">
+            <h2 class="text-3xl font-bold text-center mb-10">Project Phases & Scope of Work</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="relative pl-8 border-l-4 border-[#00A6ED]">
+                    <div class="mb-8">
+                        <div class="absolute w-6 h-6 bg-[#00A6ED] rounded-full -left-3.5 border-4 border-white"></div>
+                        <h3 class="text-xl font-bold text-slate-800">1. Discovery & Planning</h3>
+                        <p class="text-gray-600">Finalizing requirements, system architecture, and API contracts.</p>
+                    </div>
+                    <div class="mb-8">
+                        <div class="absolute w-6 h-6 bg-[#00A6ED] rounded-full -left-3.5 border-4 border-white"></div>
+                        <h3 class="text-xl font-bold text-slate-800">2. Development</h3>
+                        <p class="text-gray-600">Building the .NET frontend, Python backend, and integrating the database.</p>
+                    </div>
+                    <div class="mb-8">
+                        <div class="absolute w-6 h-6 bg-[#00A6ED] rounded-full -left-3.5 border-4 border-white"></div>
+                        <h3 class="text-xl font-bold text-slate-800">3. Testing & QA</h3>
+                        <p class="text-gray-600">Conducting functional, performance, and security testing.</p>
+                    </div>
+                    <div>
+                        <div class="absolute w-6 h-6 bg-[#00A6ED] rounded-full -left-3.5 border-4 border-white"></div>
+                        <h3 class="text-xl font-bold text-slate-800">4. Deployment & Launch</h3>
+                        <p class="text-gray-600">Deploying all services to a live environment with post-launch support.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="risks" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-10">Risk Mitigation Overview</h2>
+            <div class="bg-white p-6 rounded-lg shadow-md max-w-3xl mx-auto">
+                <p class="text-gray-600 text-center mb-6">The project plan includes proactive strategies for potential challenges. This chart visualizes the anticipated impact level of key risk areas, allowing for focused mitigation efforts.</p>
+                <div class="chart-container">
+                    <canvas id="riskRadarChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center p-6 bg-slate-800 text-white">
+        <p>This infographic provides a visual summary of the AI-Powered Chatbot project proposal.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const FONT_COLOR = '#334155';
+            const GRID_COLOR = '#e2e8f0';
+
+            const tooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) {
+                    return label.join(' ');
+                }
+                return label;
+            };
+
+            const wrapLabels = (label, maxWidth) => {
+                if (typeof label !== 'string' || label.length <= maxWidth) {
+                    return label;
+                }
+                const words = label.split(' ');
+                let lines = [];
+                let currentLine = '';
+                words.forEach(word => {
+                    if ((currentLine + word).length > maxWidth) {
+                        lines.push(currentLine.trim());
+                        currentLine = '';
+                    }
+                    currentLine += word + ' ';
+                });
+                lines.push(currentLine.trim());
+                return lines;
+            };
+            
+            const commonChartOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: FONT_COLOR,
+                            font: {
+                                size: 14
+                            }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                },
+                scales: {
+                    r: {
+                        angleLines: { color: GRID_COLOR },
+                        grid: { color: GRID_COLOR },
+                        pointLabels: {
+                            color: FONT_COLOR,
+                            font: { size: 14 }
+                        },
+                        ticks: {
+                            backdropColor: 'rgba(255, 255, 255, 0.75)',
+                            color: FONT_COLOR
+                        }
+                    },
+                    x: {
+                        ticks: { color: FONT_COLOR, font: { size: 12 } },
+                        grid: { color: GRID_COLOR }
+                    },
+                    y: {
+                        ticks: { color: FONT_COLOR, font: { size: 12 } },
+                        grid: { color: GRID_COLOR },
+                        beginAtZero: true
+                    }
+                }
+            };
+            
+            const fileTypesChartCtx = document.getElementById('fileTypesChart')?.getContext('2d');
+            if (fileTypesChartCtx) {
+                new Chart(fileTypesChartCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['PDF Documents', 'Image Files (PNG, JPG)'],
+                        datasets: [{
+                            label: 'Supported File Types',
+                            data: [50, 50],
+                            backgroundColor: ['#00A6ED', '#F56F9B'],
+                            borderColor: ['#FFFFFF'],
+                            borderWidth: 4,
+                            hoverOffset: 8
+                        }]
+                    },
+                    options: {
+                        ...commonChartOptions,
+                        scales: {},
+                        cutout: '60%'
+                    }
+                });
+            }
+
+            const featureFocusChartCtx = document.getElementById('featureFocusChart')?.getContext('2d');
+            if(featureFocusChartCtx) {
+                const rawLabels = ['Conversational AI', 'Document Text Extraction', 'Persistent Chat History', 'Scalable Architecture', 'Secure Data Handling'];
+                const wrappedLabels = rawLabels.map(label => wrapLabels(label, 16));
+
+                new Chart(featureFocusChartCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: wrappedLabels,
+                        datasets: [{
+                            label: 'Focus Level',
+                            data: [90, 85, 80, 75, 88],
+                            backgroundColor: ['#00A6ED', '#00C2E8', '#83D4F5', '#F56F9B', '#F7A1BE'],
+                            borderRadius: 6,
+                            barPercentage: 0.6,
+                        }]
+                    },
+                    options: {
+                        ...commonChartOptions,
+                        plugins: {
+                            ...commonChartOptions.plugins,
+                            legend: {
+                                display: false
+                            }
+                        },
+                        indexAxis: 'y'
+                    }
+                });
+            }
+
+            const riskRadarChartCtx = document.getElementById('riskRadarChart')?.getContext('2d');
+            if(riskRadarChartCtx) {
+                new Chart(riskRadarChartCtx, {
+                    type: 'radar',
+                    data: {
+                        labels: ['Scope Creep', 'AI Performance', 'File Processing', 'Resource Availability', 'Security'],
+                        datasets: [{
+                            label: 'Anticipated Risk Impact',
+                            data: [6, 8, 7, 5, 9],
+                            fill: true,
+                            backgroundColor: 'rgba(245, 111, 155, 0.2)',
+                            borderColor: '#F56F9B',
+                            pointBackgroundColor: '#F56F9B',
+                            pointBorderColor: '#fff',
+                            pointHoverBackgroundColor: '#fff',
+                            pointHoverBorderColor: '#F56F9B'
+                        }]
+                    },
+                    options: {
+                        ...commonChartOptions,
+                        scales: {
+                           r: {
+                               ...commonChartOptions.scales.r,
+                               suggestedMin: 0,
+                               suggestedMax: 10
+                           }
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
